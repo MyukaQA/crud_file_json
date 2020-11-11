@@ -42,8 +42,11 @@ class PostsController extends Controller
         $file = Storage::get("public/data.json");
         $data = json_decode($file, true);
 
+        $idlist = array_column($data, 'id');
+        $auto_increment_id = end($idlist);
+
         $data [] = array(
-            'id' => $request->id,
+            'id' => $auto_increment_id+1,
             'author' => $request->author,
             'title' => $request->title,
             'content' => $request->content

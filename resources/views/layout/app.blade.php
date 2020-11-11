@@ -45,10 +45,10 @@
       <div class="modal-body">
         <form action="{{route('store')}}" method="POST">
           {{ csrf_field() }}
-          <div class="form-group">
+          {{-- <div class="form-group">
             <label for="exampleInputEmail1">id</label>
             <input name="id" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          </div>
+          </div> --}}
 
           <div class="form-group">
             <label for="exampleInputEmail1">author</label>
